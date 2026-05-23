@@ -8,7 +8,12 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # GPS library
 PRODUCT_PACKAGES += \
     gps.mt6737m \
-    libcurl
+    libepos \
+    mnld \
+    libmnl \
+    libcurl \
+    wifi2agps \
+    wmt_loader
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \

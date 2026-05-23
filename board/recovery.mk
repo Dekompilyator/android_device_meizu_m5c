@@ -14,6 +14,6 @@ TW_HAS_DOWNLOAD_MODE := true
 TW_EXCLUDE_SUPERSU := true
 TW_USE_TOOLBOX := true
 
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/recovery.fstab
 TARGET_PREBUILT_RECOVERY_KERNEL := $(LOCAL_PATH)/rootdir/kernel
 BOARD_HAS_NO_SELECT_BUTTON := true
