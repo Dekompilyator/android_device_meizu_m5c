@@ -1,4 +1,31 @@
-# Telephony
+# Meizu M5c and MediaTek 6737M proprietary blob`s requried for building Android 7 Nougat ROM`s
+
+# Blob`s are taken from official Flyme 6.0.2.3G firmware for global M5c model
+
+# NOTE: This proprietary list is not "complete", in sense that listed blob`s below are being compiled from source while ROM building, and not taken from Flyme. This is requried step. Their sources can be found in the device tree of this device. They are being present in the final build.
+
+# libfmcust, radio.fm.mt6737m
+# wmt_loader
+# libion_mtk
+# gps.mt6737m, libepos, mtk_mnld
+# lights.mt6737m
+# fuelgauged, fuelgauged_static, libfgauge, libfgauge_static
+# libui_ext
+# libhwm 
+# librrc
+# md_ctrl
+# memtrack.mt6737m
+# mrdump
+# libperfservicenative
+# power.mt6737m
+# libmtcloader, thermal_manager
+
+#######################################################
+Proprietary list adapted for Meizu M5c by Dekompilyator
+#######################################################
+
+
+# Telephony / RIL / Modem / IMS
 bin/6620_launcher
 bin/ccci_fsd
 bin/ccci_mdinit
@@ -52,12 +79,7 @@ bin/qmcX983d
 bin/s62xd
 lib{,64}/hw/sensors.mt6737m.so
 
-# GPS
-bin/mtk_agpsd
-bin/slpd
-bin/wifi2agps
-
-# Power / Thermal
+# Thermal Configs
 lib{,64}/libmtklimiter.so
 etc/.tp/.ht120.mtc
 etc/.tp/thermal.conf
@@ -149,7 +171,9 @@ lib/libmhalImageCodec.so
 lib{,64}/libmtkcamera_client.so
 lib{,64}/libmtkjpeg.so
 lib{,64}/hw/camera.mt6737m.so
-#More proprietary camera libs (including meizu)
+#
+# More proprietary camera libs (including meizu)
+#
 lib{,64}/libacdk.so
 lib{,64}/libcameracustom.so 
 lib{,64}/libmeizucamera.so
@@ -259,7 +283,6 @@ lib{,64}/libfs_mgr.so
 # Misc
 etc/perfservscntbl.txt
 etc/trustzone.bin
-
 
 # Wifi
 etc/firmware/ROMv2_lm_patch_1_0_hdr.bin
