@@ -14,11 +14,11 @@
 # limitations under the License.
 #
 
-# Inherit some common dotOS stuff.
+# Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, $(LOCAL_PATH)/device_m5c.mk)
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device display
 TARGET_SCREEN_HEIGHT := 1280

@@ -12,8 +12,8 @@ LOCAL_SRC_FILES := \
 
 LOCAL_C_INCLUDES := \
   system/bt/hci/include \
-  device/meizu/m5c/bluetooth-mtk/include/libnvram \
-  device/meizu/m5c/bluetooth-mtk/include
+  device/meizu/m5c/mtk/bluetooth-mtk/include/libnvram \
+  device/meizu/m5c/mtk/bluetooth-mtk/include
 
 LOCAL_CFLAGS += -DMTK_CONSYS_MT6735
 

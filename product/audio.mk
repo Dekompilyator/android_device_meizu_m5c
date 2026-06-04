@@ -16,9 +16,10 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
-    audio_policy.default \
+    audio_policy.stub \
     libaudiopolicymanagerdefault \
     libaudio-resampler \
+    libaudiosetting \
     libtinyalsa \
     libtinycompress \
     libtinymix \
