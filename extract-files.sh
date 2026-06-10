@@ -54,7 +54,7 @@ function extract() {
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*
 
-#extract ../../$VENDOR/$DEVICE/proprietary-files-mtk.txt $BASE
-extract ../../$VENDOR/$DEVICE/proprietary-files-mtk.txt $BASE
+#extract ../../$VENDOR/$DEVICE/proprietary-files.txt $BASE
+extract ../../$VENDOR/$DEVICE/proprietary-files.txt $BASE
 
 #./setup-makefiles.sh

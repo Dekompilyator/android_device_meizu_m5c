@@ -1,4 +1,4 @@
-# Device tree for Meizu M5c (UNDER DEVELOPMENT)
+# Device tree for Meizu M5c
 
 Specs
 ================================

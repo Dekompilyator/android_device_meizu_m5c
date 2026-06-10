@@ -13,7 +13,8 @@ PRODUCT_PACKAGES += \
     libmnl \
     libcurl \
     wifi2agps \
-    wmt_loader
+    wmt_loader \
+    mtk_agpsd
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \

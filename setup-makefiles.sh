@@ -27,7 +27,7 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-FILES=$(eval echo `egrep -v '(^#|^$)' proprietary-files-mtk.txt`)
+FILES=$(eval echo `egrep -v '(^#|^$)' proprietary-files.txt`)
 COUNT=`echo $FILES | wc -w`
 
 for FILE in $FILES; do

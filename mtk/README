@@ -1,25 +1,6 @@
-Proprietary MediaTek sources
-
-# Bluetooth MTK
-# Combo_loader
-# Engineer Mode app
-# Fmradio
-# Fuelgauged
-# GPS
-# Libgem (libgralloc_extra, libgui_ext)
-# Libhwm
-# ION MTK library
-# Liblights
-# Librrc
-# MD_ctrl
-# Memtrack
-# Mrdump
-# Perfomance service
-# Power
-# Thermal manager
-# WPA Supplicant
-# YGPS app
-
-#
-# Special thanks to: Zormax, seluce, iodine71, olegsvs, danielhk, Zormax, xcore995, SRTK
-#
+================
+Proprietary MediaTek elements
+================
+We must use this sources instead of Meizu proprietary ones for successfull build and working system...
+================
+Special thanks to: Zormax, seluce, iodine71, olegsvs, danielhk, Zormax, xcore995, SRTK

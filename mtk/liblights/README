@@ -10,3 +10,6 @@ liblog.so
 HOW TO USE IT?
 ==============
 light.default.so Provide API for JNI layer so that the LightsService can access the LEDs and Backlight in HAL layer.
+
+==============
+Adapted for Meizu by Dekompilyator...

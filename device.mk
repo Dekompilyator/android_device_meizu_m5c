@@ -1,30 +1,61 @@
-#
-# Copyright (C) 2015-2016 The CyanogenMod Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+DEVICE_PATH := device/meizu/m5c
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Device specific overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/mtk/include
 
 # Device product elements
-include $(LOCAL_PATH)/product/*.mk
+############################################################################################
+# Audio | Media
+include $(DEVICE_PATH)/product/audio.mk
+include $(DEVICE_PATH)/product/media.mk
+
+# Telephony | Connectivity
+include $(DEVICE_PATH)/product/ril.mk
+include $(DEVICE_PATH)/product/telecomm.mk
+include $(DEVICE_PATH)/product/radio.mk
+include $(DEVICE_PATH)/product/wifi.mk
+include $(DEVICE_PATH)/product/bluetooth.mk
+include $(DEVICE_PATH)/product/gps.mk
+include $(DEVICE_PATH)/product/fm.mk
+
+# Fuelgauge | Power | Thermal
+include $(DEVICE_PATH)/product/power.mk
+include $(DEVICE_PATH)/product/fuelgauged.mk
+include $(DEVICE_PATH)/product/thermal.mk
+
+# Lights | Display
+include $(DEVICE_PATH)/product/lights.mk
+include $(DEVICE_PATH)/product/input.mk
+include $(DEVICE_PATH)/product/display.mk
+include $(DEVICE_PATH)/product/sensors.mk
+include $(DEVICE_PATH)/product/LiveDisplay.mk
+
+# Camera
+include $(DEVICE_PATH)/product/camera.mk
+
+# System | Core
+include $(DEVICE_PATH)/product/hardware.mk
+include $(DEVICE_PATH)/product/ramdisk.mk
+include $(DEVICE_PATH)/product/usb.mk
+include $(DEVICE_PATH)/product/fs_manag.mk
+include $(DEVICE_PATH)/product/memtrack.mk
+include $(DEVICE_PATH)/product/mrdump.mk
+
+# Apps
+include $(DEVICE_PATH)/product/EngineerMode.mk
+include $(DEVICE_PATH)/product/YGPS.mk
+include $(DEVICE_PATH)/product/wallpaper.mk
+include $(DEVICE_PATH)/product/browser.mk
+
+# Doze
+include $(DEVICE_PATH)/product/doze.mk
+############################################################################################
 
 # Dalvik heap configurations
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)

@@ -8,7 +8,6 @@ cd system/core
 patch -p1 < ../../device/$brand/$model/patches_mtk/system_core/0001-system_core.patch
 patch -p1 < ../../device/$brand/$model/patches_mtk/system_core/0002-Prevent-spamming-audio.patch
 patch -p1 < ../../device/$brand/$model/patches_mtk/system_core/0003-healthd-correctly-report-battery-voltage-on-MTK-kernels.patch
-patch -p1 < ../../device/$brand/$model/patches_mtk/system_core/0004_system_core_rootdir_ueventd.patch
 patch -p1 < ../../device/$brand/$model/patches_mtk/system_core/0005_system_core_fingerprint.patch
 cd ../..
 cd bionic
@@ -51,10 +50,6 @@ cd ../../..
 cd external/wpa_supplicant_8
 patch -p1 < ../../device/$brand/$model/patches_mtk/external_wpa_supplicant_8/0001-Ignore-fake-nvram-wifi.patch
 cd ../..
-cd packages/apps/Settings
-patch -p1 < ../../../device/$brand/$model/patches_mtk/settings.patch
-git clean -f -d
-cd ../../..
 
 # EngineerMode Patches
 cd frameworks/av

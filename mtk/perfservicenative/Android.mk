@@ -38,12 +38,14 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES += liblog libnativehelper libdl libbinder libcutils libutils
 LOCAL_PRELINK_MODULE := false
 
+LOCAL_PROPRIETARY_MODULE := false
+LOCAL_MODULE_RELATIVE_PATH := 
+
 LOCAL_C_INCLUDES += $(JNI_H_INCLUDE) \
-					$(LOCAL_PATH) \
+                    $(LOCAL_PATH)
 
 LOCAL_SRC_FILES := PerfServiceNative.cpp
 LOCAL_MODULE := libperfservicenative
-LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
 

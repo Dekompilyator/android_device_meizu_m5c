@@ -24,11 +24,9 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-# Device identifier
-PRODUCT_BRAND := meizu
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := m5c
-PRODUCT_MANUFACTURER := Meizu
-PRODUCT_MODEL := Meizu M5c
 PRODUCT_NAME := lineage_m5c
-PRODUCT_RELEASE_NAME := m5c
-PRODUCT_RESTRICT_VENDOR_FILES := false
+PRODUCT_BRAND := Meizu
+PRODUCT_MODEL := m5c
+PRODUCT_MANUFACTURER := Meizu
