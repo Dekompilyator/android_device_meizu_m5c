@@ -16,22 +16,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_IS_64_BIT := true
 
 # Device board elements
-include $(DEVICE_PATH)/board/kernel.mk
-include $(DEVICE_PATH)/board/filesystem.mk
-include $(DEVICE_PATH)/board/hardware.mk
-include $(DEVICE_PATH)/board/recovery.mk
-include $(DEVICE_PATH)/board/audio.mk
-include $(DEVICE_PATH)/board/bootanimation.mk
-include $(DEVICE_PATH)/board/bluetooth.mk
-include $(DEVICE_PATH)/board/camera.mk
-include $(DEVICE_PATH)/board/display.mk
-include $(DEVICE_PATH)/board/gps.mk
-include $(DEVICE_PATH)/board/media.mk
-include $(DEVICE_PATH)/board/omx.mk
-include $(DEVICE_PATH)/board/power.mk
-include $(DEVICE_PATH)/board/sensors.mk
-include $(DEVICE_PATH)/board/telephony.mk
-include $(DEVICE_PATH)/board/wifi.mk
+-include $(DEVICE_PATH)/board/*.mk
 #######################################################################
 
 # Platform
@@ -56,7 +41,6 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # SELinux
 BOARD_SEPOLICY_DIRS := $(DEVICE_PATH)/sepolicy
-POLICYVERS := 29
 
 # Seccomp
 BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
