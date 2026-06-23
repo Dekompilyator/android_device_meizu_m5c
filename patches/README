@@ -1,0 +1,4 @@
+This directory contains nessecary MediaTek patches for devices to fucntion properly.
+====================================================================================
+Run apply-patches.sh within your Android source directory to apply them.
+====================================================================================

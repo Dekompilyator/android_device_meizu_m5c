@@ -1,16 +1,38 @@
 #!/bin/bash
-cd frameworks/av
-git apply -v ../../device/meizu/m5c/patches/0001-frameworks_av.patch
-cd ../..
-cd frameworks/base
-git apply -v ../../device/meizu/m5c/patches/0002-frameworks_base.patch
-cd ../..
-cd frameworks/native
-git apply -v ../../device/meizu/m5c/patches/0003-frameworks_native.patch
-cd ../..
-cd system/netd
-git apply -v ../../device/meizu/m5c/patches/0004-system_netd.patch
-cd ../..
 cd system/core
-git apply -v ../../device/meizu/m5c/patches/0005-system_core.patch
+git apply -v ../../device/meizu/m1710/patches/system_core.patch
 cd ../..
+cd bionic
+git apply -v ../device/meizu/m1710/patches/bionic.patch
+cd ..
+cd system/sepolicy
+git apply -v ../../device/meizu/m1710/patches/system_sepolicy.patch
+cd ../..
+cd frameworks/av
+git apply -v ../../device/meizu/m1710/patches/frameworks_av.patch
+cd ..
+cd native
+git apply -v ../../device/meizu/m1710/patches/frameworks_native.patch
+cd ..
+cd base
+git apply -v ../../device/meizu/m1710/patches/frameworks_base.patch
+cd ..
+cd opt/telephony
+git apply -v ../../../device/meizu/m1710/patches/frameworks_opt_telephony.patch
+cd ../../..
+cd packages/apps/Snap
+git apply -v ../../../device/meizu/m1710/patches/snap.patch
+cd ..
+cd FMRadio
+git apply -v ../../../device/meizu/m1710/patches/fmradio.patch
+cd ..
+cd Settings
+git apply -v ../../../device/meizu/m1710/patches/shivom.patch
+cd ../../..
+cd system/netd
+git apply -v ../../device/meizu/m1710/patches/system_netd.patch
+cd ../..
+cd vendor/cmsdk
+git apply -v ../../device/meizu/m1710/patches/vendor_cmsdk.patch
+cd ../..
+
