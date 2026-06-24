@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,22 +17,16 @@
 package com.android.internal.telephony;
 
 import static com.android.internal.telephony.RILConstants.*;
-
 import com.android.internal.telephony.dataconnection.DataCallResponse;
 import com.android.internal.telephony.uicc.IccRefreshResponse;
-
 import android.content.Context;
 import android.os.AsyncResult;
 import android.os.Message;
 import android.os.Parcel;
 import android.os.SystemProperties;
-
 import android.provider.Settings;
 import android.provider.Settings.Global;
-
-import android.telephony.Rlog;
 import android.telephony.TelephonyManager;
-
 import com.android.internal.telephony.MtkEccList;
 
 /**
@@ -47,7 +41,6 @@ public class MT6735 extends RIL implements CommandsInterface {
     private static final int RIL_UNSOL_INCOMING_CALL_INDICATION = 3042;
     private static final int RIL_UNSOL_CALL_INFO_INDICATION = 3049;
     private static final int RIL_UNSOL_SET_ATTACH_APN = 3073;
-
     private static final int RIL_REQUEST_MODEM_POWEROFF = 2010;
     private static final int RIL_REQUEST_MODEM_POWERON = 2028;
     private static final int RIL_REQUEST_RESUME_REGISTRATION = 2065;
@@ -65,7 +58,6 @@ public class MT6735 extends RIL implements CommandsInterface {
     public MT6735(Context context, int preferredNetworkType, int cdmaSubscription) {
         super(context, preferredNetworkType, cdmaSubscription, null);
         //mContext = context;
-        Rlog.i("MT6735", "Ctor1: context is " + mContext);
         mTelephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         mEccList = new MtkEccList();
     }
@@ -74,7 +66,6 @@ public class MT6735 extends RIL implements CommandsInterface {
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
         //mContext = context;
-        Rlog.i("MT6735", "Ctor2: context is " + mContext);
         mTelephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         mEccList = new MtkEccList();
     }
@@ -93,7 +84,6 @@ public class MT6735 extends RIL implements CommandsInterface {
             default: return "<unknown response>";
         }
     }
-
 
     @Override
     protected void
@@ -230,7 +220,6 @@ public class MT6735 extends RIL implements CommandsInterface {
         rr.mParcel.writeInt(authType);
         rr.mParcel.writeString(username);
         rr.mParcel.writeString(password);
-
         rr.mParcel.writeString(operatorNumber);
         rr.mParcel.writeInt(1);
         rr.mParcel.writeStringArray(null);
@@ -260,7 +249,7 @@ public class MT6735 extends RIL implements CommandsInterface {
         String rawefId = p.readString();
         response.efId   = rawefId == null ? 0 : Integer.parseInt(rawefId);
         response.aid = p.readString();
-
+		
         return response;
     }
 
@@ -501,7 +490,6 @@ public class MT6735 extends RIL implements CommandsInterface {
     iccIOForApp (int command, int fileid, String path, int p1, int p2, int p3,
             String data, String pin2, String aid, Message result) {
         if (command == 0xc0 && p3 == 0) {
-            Rlog.i("MT6735", "Override the size for the COMMAND_GET_RESPONSE 0 => 15");
             p3 = 15;
         }
         super.iccIOForApp(command, fileid, path, p1, p2, p3, data, pin2, aid, result);
