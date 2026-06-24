@@ -1,6 +1,3 @@
-From d1206102eb9a0844ae1d2917e472a365ac91fe5b Mon Sep 17 00:00:00 2001
-From: shivom007 <yashpaljoshi76@gmail.com>
-Date: Thu, 19 Apr 2018 09:29:29 +0000
 Subject: [PATCH] author info in about phone
 
 Change-Id: Ibc5d23968960a88801d7856688ec57b755071ad2
@@ -19,7 +16,7 @@ index b8121fbd1f..b3d7bdf2e5 100644
      <!-- Device Info screen. Used for a status item's value when the proper value is not known -->
      <string name="device_info_default">Unknown</string>
 +    <!-- Device Info screen. Used for a status item's value when the proper value is not known -->
-+    <string name="author_info_default">Yashpal Joshi - Shivom Techdroid</string>
++    <string name="author_info_default">Dekompilyator (Maintainer)</string>
      <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
      <plurals name="show_dev_countdown">
          <item quantity="one">You are now <xliff:g id="step_count">%1$d</xliff:g> step away from being a developer.</item>
@@ -45,7 +42,7 @@ index d59486cc9e..a2fafe5755 100644
 +		android:title="@string/author_info"
 +		android:summary="@string/author_info_default">
 +		<intent android:action="android.intent.action.VIEW"
-+			android:data="https://github.com/shivom007" />
++			android:data="https://github.com/Dekompilyator" />
 +	</PreferenceScreen>
 +
          <!-- Device FCC equipment id -->
