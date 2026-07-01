@@ -8,9 +8,9 @@ GPU     | Mali-T720
 Memory  | 2GB RAM
 Shipped Android Version | 6.0
 Storage | 16 / 32GB
-MicroSD | Up to 64GB
+MicroSD | Up to 128GB
 Battery | 3000 mAh
-Display | 1080 x 1920 pixels, 5.2 inches
+Display | 1280 x 720 pixels, 5.2 inches
 Camera  | Main 8MP / Front 5MP, autofocus, LED flash
 
 <img width="250" height="300" alt="52940669-removebg-preview" src="https://github.com/user-attachments/assets/e592584b-21ff-4927-9456-75dd53076316" />
