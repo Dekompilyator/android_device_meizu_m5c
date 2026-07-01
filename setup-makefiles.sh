@@ -103,14 +103,14 @@ LOCAL_SRC_FILES_32 := proprietary/lib/libnvram.so
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := libgralloc_extra
+LOCAL_MODULE := libged
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_OWNER := MediaTek
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MULTILIB := both
-LOCAL_SRC_FILES_64 := proprietary/lib64/libgralloc_extra.so
-LOCAL_SRC_FILES_32 := proprietary/lib/libgralloc_extra.so
+LOCAL_SRC_FILES_64 := proprietary/lib64/libged.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libged.so
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
