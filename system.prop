@@ -3,7 +3,7 @@
 ############################################
 
 # Mediatek Chip
-persist.mtk.wcn.combo.chipid=-1
+persist.mtk.wcn.combo.chipid=0x0335
 persist.mtk.wcn.fwlog.status=0
 service.wcn.driver.ready=no
 persist.mtk.combo.coredump=no
@@ -12,42 +12,37 @@ ro.board.platform=mt6737m
 ro.mediatek.platform=MT6737M
 ro.mediatek.version.sdk=4
 ro.mediatek.version.release=ZAL856_999A_V0_0_5_BSP_20170605
-ro.mediatek.version.branch=alps-mp-n0.mp1
+ro.mediatek.version.branch=alps-mp-m0.mp1
+ro.sf.hwrotation=0
+persist.sys.scrollingcache=2
+touch.size.calibration=geometric
+touch.size.scale=100
+touch.pressure.calibration=amplitude
+touch.pressure.scale=0.1
 
-# RIL Base
+# Telephony
 rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 ro.telephony.ril_class=MT6735
 ro.telephony.ril.config=fakeiccid
-
-# Multi-SIM
 ro.telephony.sim.count=2
-persist.radio.multisim.config=dsds
 persist.radio.default.sim=0
-ro.mtk_gemini_support=1
-persist.gemini.sim_num=2
-ro.gemini.smart_sim_switch=false
-ro.num_md_protocol=2
-
-# Modem Settings
 persist.radio.mobile.data=0,0
-ril.external.md=0
+persist.radio.multisim.config=dsds
+bgw.current3gband=0
 ril.current.share_modem=2
+ril.external.md=0
 ril.telephony.mode=0
-ril.specific.sm_cause=0
-ril.flightmode.poweroffMD=1
-ril.radiooff.poweroffMD=0
-ro.telephony.default_network=9
-
-# Fast Dormancy
 persist.radio.fd.counter=150
 persist.radio.fd.off.counter=50
 persist.radio.fd.r8.counter=150
 persist.radio.fd.off.r8.counter=50
-
-# MTK RIL Hardware Boot Options
-ro.boot.opt_lte_support=1
+ro.mtk_gemini_support=1
+persist.gemini.sim_num=2
+ro.gemini.smart_sim_switch=false
+ro.com.android.mobiledata=false
 ro.mtk_lte_support=1
+ro.boot.opt_lte_support=1
 ro.boot.opt_c2k_lte_mode=0
 ro.boot.opt_md1_support=5
 ro.boot.opt_md2_support=0
@@ -57,8 +52,14 @@ persist.radio.mtk_ps3_rat=G
 ro.mtk_md_sbp_custom_value=0
 ro.mtk_world_phone_policy=0
 ro.mtk_enable_md1=1
+ro.mtk_fd_support=1
+ro.num_md_protocol=2
 ro.mtk_protocol1_rat_config=Lf/Lt/W/G
+ro.longcheer.sku=EMEA
+ro.longcheer.simsum=2
+ro.longcheer.thermal=1
 ro.boot.opt_eccci_c2k=0
+ro.telephony.default_network=20,20
 
 # Wifi
 mediatek.wlan.chip=CONSYS_MT6735
@@ -69,7 +70,6 @@ mediatek.wlan.ctia=0
 wifi.tethering.interface=wlan0
 wifi.interface=wlan0
 wifi.direct.interface=p2p0
-wifi.supplicant_scan_interval=180
 
 # Bluetooth 
 ro.mtk_bt_support=1
@@ -78,7 +78,7 @@ ro.mtk_bt_support=1
 net.tethering.noprovisioning=true
 
 # GLES
-ro.opengles.version=196609
+ro.opengles.version=196608
 
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
@@ -105,9 +105,13 @@ ro.audio.silent=0
 ro.mtk_audio_ape_support=1
 ro.mtk_audio_tuning_tool_ver=V1
 ro.ril.enable.amr.wideband=1
+ro.mtk_audenh_support=1
+ro.mtk_fm_recording_support=1
+ro.mtk_dual_mic_support=1
 
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false
+ro.hardware.egl=mali
 
 # GPS
 ro.mtk_gps_support=1
@@ -128,20 +132,21 @@ drm.service.enabled=true
 ro.mtk_oma_drm_support=1
 ro.mtk_cta_drm_support=1
 ro.mtk_widevine_drm_l3_support=1
+mtk.vdec.waitkeyframeforplay=1
+ro.media.maxmem=500000000
 
 # Camera
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
-ro.camera.disable_zsl_mode=1
 
 # Performance
 ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
-windowsmgr.max_events_per_sec=150
-ro.max.fling_velocity=12000
-ro.min.fling_velocity=8000
-ro.min_pointer_dur=8
 
-# Perfservice
+# MediaTek common
 ro.mtk_perfservice_support=1
+ro.mtk_bsp_package=1
+ro.nxpnfc.feature=1
+mdc_initial_max_retry=10
+ro.mtk_emmc_support=1
