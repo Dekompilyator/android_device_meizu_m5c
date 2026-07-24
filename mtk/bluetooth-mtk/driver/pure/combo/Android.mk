@@ -11,8 +11,8 @@ LOCAL_SRC_FILES := \
   radiomod.c
 
 LOCAL_C_INCLUDES := \
-  device/meizu/m5c/mtk/Bluetooth/bluetooth-mtk/include/libnvram \
-  device/meizu/m5c/mtk/Bluetooth/bluetooth-mtk/include \
+  device/meizu/m5c/mtk/bluetooth-mtk/include/libnvram \
+  device/meizu/m5c/mtk/bluetooth-mtk/include \
   $(LOCAL_PATH)/../inc
 
 LOCAL_CFLAGS += -DMTK_CONSYS_MT6735

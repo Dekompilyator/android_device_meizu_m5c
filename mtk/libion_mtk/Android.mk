@@ -22,7 +22,7 @@ LOCAL_MODULE := libion_mtk
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_C_INCLUDES += \
-	device/meizu/m5c/mtk/Graphics/libion_mtk/include \
+	device/meizu/m5c/mtk/libion_mtk/include \
 	system/core/include
 
 LOCAL_SHARED_LIBRARIES := libion liblog libdl
