@@ -16,7 +16,22 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_IS_64_BIT := true
 
 # Device board elements
--include $(DEVICE_PATH)/board/*.mk
+include $(DEVICE_PATH)/board/kernel.mk
+include $(DEVICE_PATH)/board/filesystem.mk
+include $(DEVICE_PATH)/board/hardware.mk
+include $(DEVICE_PATH)/board/recovery.mk
+include $(DEVICE_PATH)/board/audio.mk
+include $(DEVICE_PATH)/board/bootanimation.mk
+include $(DEVICE_PATH)/board/bluetooth.mk
+include $(DEVICE_PATH)/board/camera.mk
+include $(DEVICE_PATH)/board/display.mk
+include $(DEVICE_PATH)/board/gps.mk
+include $(DEVICE_PATH)/board/media.mk
+include $(DEVICE_PATH)/board/omx.mk
+include $(DEVICE_PATH)/board/power.mk
+include $(DEVICE_PATH)/board/sensors.mk
+include $(DEVICE_PATH)/board/telephony.mk
+include $(DEVICE_PATH)/board/wifi.mk
 #######################################################################
 
 # Platform
@@ -28,14 +43,10 @@ BOARD_HAS_MTK_HARDWARE := true
 BOARD_USES_MTK_HARDWARE := true
 MTK_HARDWARE := true
 
-# MTK Symbols
-TARGET_LDPRELOAD += mtk_symbols.so
-
 # Flags
 BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 BOARD_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 BOARD_GLOBAL_CFLAGS += -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
-BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
