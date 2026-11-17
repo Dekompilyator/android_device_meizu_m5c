@@ -34,7 +34,6 @@ include $(DEVICE_PATH)/product/lights.mk
 include $(DEVICE_PATH)/product/input.mk
 include $(DEVICE_PATH)/product/display.mk
 include $(DEVICE_PATH)/product/sensors.mk
-include $(DEVICE_PATH)/product/LiveDisplay.mk
 
 # Camera
 include $(DEVICE_PATH)/product/camera.mk
@@ -50,18 +49,14 @@ include $(DEVICE_PATH)/product/mrdump.mk
 # Apps
 include $(DEVICE_PATH)/product/EngineerMode.mk
 include $(DEVICE_PATH)/product/YGPS.mk
-include $(DEVICE_PATH)/product/wallpaper.mk
 include $(DEVICE_PATH)/product/browser.mk
-
-# Doze
-include $(DEVICE_PATH)/product/doze.mk
 ############################################################################################
 
 # Dalvik heap configurations
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Call hwui memory config
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Product common configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -77,5 +72,4 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.debuggable=1 \
 	ro.adb.secure=0 \
 	persist.service.acm.enable=0 \
-	ro.mount.fs=EXT4 \
-	camera.disable_zsl_mode=1
+	ro.mount.fs=EXT4
